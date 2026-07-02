@@ -79,3 +79,13 @@ const high5 = function () {
 };
 // document.body.addEventListener('click', high5);
 // Call back function is vital part in javaScript language
+
+// Functions returning Functions
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+const greeter = greet('Hey');
+console.log(greeter);
+greeter('Aminul');
