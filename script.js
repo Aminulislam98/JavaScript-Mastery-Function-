@@ -52,3 +52,4 @@
 // Function are also value in javaScript
 // In JavaScript : Functions are objects
 // Learn about Higher order function
+// Function accepting callback function functions
