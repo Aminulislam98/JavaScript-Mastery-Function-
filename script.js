@@ -78,3 +78,4 @@ const high5 = function () {
   console.log('👋');
 };
 // document.body.addEventListener('click', high5);
+// Call back function is vital part in javaScript language
