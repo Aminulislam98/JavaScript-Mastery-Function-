@@ -74,3 +74,7 @@ transformer('JavaScript is the best!', oneWord);
 // Call back function mean passing a function into another function as a parameter that's called called back function
 
 // JavaScript uses callback function all the time
+const high5 = function () {
+  console.log('👋');
+};
+// document.body.addEventListener('click', high5);
