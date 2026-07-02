@@ -71,3 +71,4 @@ const transformer = function (str, fn) {
 
 transformer('JavaScript is the best!', upperFirstWord);
 transformer('JavaScript is the best!', oneWord);
+// Call back function mean passing a function into another function as a parameter that's called called back function
