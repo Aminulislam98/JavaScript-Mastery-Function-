@@ -48,3 +48,4 @@
 // checkIn(flight, aminul);
 
 // First class and higher order functions
+// First class function mean, a function can be used almost everywhere like , a function can be passed as parameter in another function and can be stored in variable , can be kept in object
