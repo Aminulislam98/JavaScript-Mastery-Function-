@@ -116,12 +116,13 @@ lufthansa.book(635, 'Aminul islam');
 console.log(lufthansa.bookings);
 
 const eurowings = {
-  name: ' Eurowings',
+  airline: ' Eurowings',
   iataCode: 'EW',
   bookings: [],
 };
 
 const book = lufthansa.book;
+
 // Call method
 book.call(eurowings, 23, 'Aminul islam');
 console.log(eurowings);
@@ -135,5 +136,37 @@ const swiss = {
 book.call(swiss, 430, 'Marry Cooper');
 console.log(swiss);
 
+// Apply method
 const flightData = [583, 'George Cooper'];
 book.apply(swiss, flightData);
+
+// Bind method
+// Bind method does not run Immediately
+const bookEW = book.bind(eurowings);
+const bookSS = book.bind(swiss);
+bookEW(332, 'Aminul islam');
+bookSS(333, 'Aminul islam');
+
+const bookEW48 = book.bind(eurowings, 48);
+bookEW48('Khadijah');
+
+// With event Listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+};
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+const greets = function (greeting, name) {
+  console.log(`${greeting} ${name}`);
+};
+
+// Practiced about partial application
+// const greetings = greets.bind(null, 'hello');
+// greetings('Aminul');
+// greetings('Khadijah');
