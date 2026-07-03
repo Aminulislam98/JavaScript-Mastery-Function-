@@ -180,3 +180,32 @@ const greets = function (greeting, name) {
 const taxRate = rate => value => value + value * rate;
 const taxCal = taxRate(0.23);
 console.log(taxCal(79));
+
+const poll = {
+  question: 'What is your favorite programming language?',
+  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+  answers: new Array(4).fill(0),
+  // register the answer
+  registerNewAnswer() {
+    const answer = Number(
+      prompt(`${this.question}
+       ${this.options[0]}
+       ${this.options[1]}
+       ${this.options[2]}
+       ${this.options[3]}
+      `),
+    );
+    // checking Is answer valid
+    typeof answer === 'number' &&
+      answer < this.options.length &&
+      this.answers[answer]++;
+  },
+
+  // Display the answer
+  displayResult() {},
+};
+
+// task 1:
+document
+  .querySelector('.poll')
+  .addEventListener('click', poll.registerNewAnswer.bind(poll));
