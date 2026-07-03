@@ -170,3 +170,9 @@ const greets = function (greeting, name) {
 // const greetings = greets.bind(null, 'hello');
 // greetings('Aminul');
 // greetings('Khadijah');
+
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.23, 120));
+
+const addVat = addTax.bind(null, 0.23);
+addVat(22);
