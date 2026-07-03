@@ -219,3 +219,5 @@ document
   .addEventListener('click', poll.registerNewAnswer.bind(poll));
 
 poll.displayResult.call({ answers: [5, 2, 3] }, 'string');
+
+// Immediately Invoked function Expression (IIFE)
