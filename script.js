@@ -81,15 +81,18 @@ const high5 = function () {
 // Call back function is vital part in javaScript language
 
 // Functions returning Functions
-const greet = function (greeting) {
-  return function (name) {
-    console.log(`${greeting} ${name}`);
-  };
-};
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+// const greeter = greet('Hey');
+// console.log(greeter);
+// greeter('Aminul');
+
+const greet = greeting => name => console.log(`${greeting} ${name}`);
 const greeter = greet('Hey');
-console.log(greeter);
 greeter('Aminul');
-
-// when a function return a anther function that time we can immediately call this function that will return inner function
-
 greet('Hello')('Aminul');
+// when a function return a anther function that time we can immediately call this function that will return inner function
+// This kind of function calling called , chained function call or Immediately invoking the return function or IIFE : stands for Immediately invoked function expression
