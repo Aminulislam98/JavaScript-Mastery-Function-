@@ -198,11 +198,19 @@ const poll = {
     // checking Is answer valid
     typeof answer === 'number' &&
       answer < this.options.length &&
+      answer >= 0 &&
       this.answers[answer]++;
+    this.displayResult('string');
   },
 
   // Display the answer
-  displayResult() {},
+  displayResult(type = 'array') {
+    if (type === 'array') {
+      console.log(this.answers);
+    } else if (type === 'string') {
+      console.log(`Poll results are ${this.answers.join(',')}`);
+    }
+  },
 };
 
 // task 1:
