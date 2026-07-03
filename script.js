@@ -171,8 +171,12 @@ const greets = function (greeting, name) {
 // greetings('Aminul');
 // greetings('Khadijah');
 
-const addTax = (rate, value) => value + value * rate;
-console.log(addTax(0.23, 120));
+// const addTax = (rate, value) => value + value * rate;
+// console.log(addTax(0.23, 120));
 
-const addVat = addTax.bind(null, 0.23);
-addVat(22);
+// const addVat = addTax.bind(null, 0.23);
+// addVat(22);
+
+const taxRate = rate => value => value + value * rate;
+const taxCal = taxRate(0.23);
+console.log(taxCal(79));
