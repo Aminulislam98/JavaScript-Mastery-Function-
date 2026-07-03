@@ -221,3 +221,5 @@ document
 poll.displayResult.call({ answers: [5, 2, 3] }, 'string');
 
 // Immediately Invoked function Expression (IIFE)
+
+// Closures
