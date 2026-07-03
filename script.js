@@ -99,7 +99,29 @@ greet('Hello')('Aminul');
 
 // The call and apply methods
 
-function hei() {
-  console.log(this);
-}
-console.log(hei());
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`,
+    );
+    this.bookings.push({ flight: ` ${this.iataCode}${flightNum}`, name });
+  },
+};
+
+lufthansa.book(238, 'Aminul islam');
+lufthansa.book(635, 'Aminul islam');
+console.log(lufthansa.bookings);
+
+const eurowings = {
+  name: ' Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+book.call(eurowings, 23, 'Aminul islam');
+console.log(eurowings);
