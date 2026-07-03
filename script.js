@@ -89,3 +89,7 @@ const greet = function (greeting) {
 const greeter = greet('Hey');
 console.log(greeter);
 greeter('Aminul');
+
+// when a function return a anther function that time we can immediately call this function that will return inner function
+
+greet('Hello')('Aminul');
