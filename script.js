@@ -96,3 +96,5 @@ greeter('Aminul');
 greet('Hello')('Aminul');
 // when a function return a anther function that time we can immediately call this function that will return inner function
 // This kind of function calling called , chained function call or Immediately invoking the return function or IIFE : stands for Immediately invoked function expression
+
+// The call and apply methods
