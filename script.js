@@ -98,3 +98,8 @@ greet('Hello')('Aminul');
 // This kind of function calling called , chained function call or Immediately invoking the return function or IIFE : stands for Immediately invoked function expression
 
 // The call and apply methods
+
+function hei() {
+  console.log(this);
+}
+console.log(hei());
