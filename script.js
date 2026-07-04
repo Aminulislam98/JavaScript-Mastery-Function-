@@ -250,3 +250,18 @@ console.dir(f);
 h();
 f();
 console.dir(f);
+
+// Example 2;
+const boardPassenger = function (n, wait) {
+  // let perGroup = n / 3;
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} Passenger`);
+    console.log(`There are 3 groups, each with ${perGroup} passenger`);
+  }, wait * 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+let perGroup = 23;
+
+boardPassenger(129, 5);
