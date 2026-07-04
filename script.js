@@ -223,3 +223,30 @@ poll.displayResult.call({ answers: [5, 2, 3] }, 'string');
 // Immediately Invoked function Expression (IIFE)
 
 // Closures
+
+// More closures Example
+
+// Example 1
+let f;
+const g = function () {
+  let a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  let b = 787;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g();
+f();
+console.dir(f);
+
+// Re assign f function:
+h();
+f();
+console.dir(f);
